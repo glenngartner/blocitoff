@@ -1,24 +1,12 @@
-# README
+# Blocitoff
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Bloc.io](http://www.bloc.io) entree with a G<sup>2</sup> aroma
 
-Things you may want to cover:
+Master-tasker-blaster
 
-* Ruby version
+Tech base:
+* Ruby v: 5.0
 
-* System dependencies
+* Postgres
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Secret sauce
