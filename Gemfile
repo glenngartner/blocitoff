@@ -33,6 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Use figaro for creds
 gem 'figaro'
 
+# Use devise for authentication and user goodness
+gem 'devise'
+
+# Use bower to manage front-end libraries
+gem 'bower-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
