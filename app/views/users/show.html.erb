@@ -6,12 +6,18 @@
         </h1>
     </div>
 
-    <div class='row'>
+    <div class='container'>
         <h2>
-            This is your page.
+            Your tasks:
         </h2>
+    </div>
+    <div class='container'>
         <h2>
-            Here, it's all about you
+            <% @items.each do |item| %>
+            <p class='task-item'>
+                <%= item.name %>
+            <p>
+                    <% end %>
         </h2>
     </div>
 </div>

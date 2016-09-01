@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def show
     @user = current_user
-  end
+    @items = Item.where("user_id = #{@user.id}")
+    end
 end
