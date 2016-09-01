@@ -10,29 +10,41 @@
 
     <body class='container'>
 
-        <% if user_signed_in? %>
-        Signed in as:
-        <strong><%= current_user.email %></strong>
-        <%= link_to "Edit Profile", edit_user_registration_path, :class => 'navbar-link' %>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "navbar-link" %>
+        <header class='page-header  header-text'>
+            <p>
+                <% if user_signed_in? %>
+                Signed in as:
+                <strong><%= current_user.email %></strong>
+                <%= link_to "Edit Profile", edit_user_registration_path, :class => 'navbar-link' %>
+                <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "navbar-link" %>
 
-    <% else %>
-        <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %>
-        <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %>
+            <% else %>
+                <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %>
+                <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %>
 
-        <% end %>
+                <% end %>
+            </p>
+        </header>
 
         <% if notice.present? %>
         <aside class="alert alert-info">
-          <%= notice %>
+            <%= notice %>
         </aside>
         <% end %>
         <% if alert.present? %>
         <aside class="alert alert-danger">
-          <%= alert %>
+            <%= alert %>
         </aside>
         <% end %>
 
         <%= yield %>
     </body>
+    <footer class="navbar-fixed-bottom footer-text">
+        <div class='container'>
+            <p class='text-muted'>
+                Brought to you by G, and the guiding hand of
+                <a href='http://www.bloc.io'>Bloc</a>
+            </p>
+        </div>
+    </footer>
 </html>
