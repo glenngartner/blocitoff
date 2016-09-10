@@ -1,23 +1,22 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 $hd-ft-font-size: 125%;
 
 .header-text {
-  font-size: $hd-ft-font-size;
+    font-size: $hd-ft-font-size;
 }
 
 .footer-text {
-  font-size: $hd-ft-font-size;
-  position: absolute;
+    font-size: $hd-ft-font-size;
+    position: relative;
 
-  .container {
-    background-color: #eeeeee;
-    padding: 1%;
-  }
+    .container {
+        background-color: #eeeeee;
+        padding: 1%;
+    }
 }
 
 .task-item {
-  color: #00AA66; 
+    color: #00AA66;
 }
