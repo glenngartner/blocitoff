@@ -6,9 +6,33 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create!(email:"glenngartner@gmail.com", password:"password")
+# Create my admin user account
+require 'faker'
+
+user_admin = User.create!(email:"glenngartner@gmail.com", password:"password")
     i = 1
 5.times do 
-    user.items.create!(name: "Item #{i}")
+    user_admin.items.create!(name: "Item #{i}")
     i += 1
 end
+
+# Create other users
+5.times do
+  User.create!(
+
+    email: Faker::Internet.email,
+    password: Faker::Internet.password
+ )
+end
+users = User.all
+
+10.times do
+    Item.create!(
+        user: users.sample,
+        name: Faker::Hipster.sentence(3),
+ )
+end
+
+ puts "Planted all the seeds"
+ puts "#{User.count} users created"
+ puts "#{Item.count} items created"

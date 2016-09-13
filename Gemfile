@@ -39,6 +39,9 @@ gem 'devise'
 # Use bower to manage front-end libraries
 gem 'bower-rails'
 
+# Use faker to generate fake stuff
+gem 'faker'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
