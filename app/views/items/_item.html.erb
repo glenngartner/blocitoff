@@ -1,5 +1,10 @@
-<tbody>
-  <%= content_tag :tr, class: "info", id: "item-#{item.id}" do %>
-    <td><%= item.name %></td>
-  <% end %>
-</tbody>
+<% @items.each do |item| %>
+  <div id='item-<%= item.id %>'>
+  <p id: "item-#{item.id}" class='task-item'>
+    <%= item.name %> 
+    <%= link_to "", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+  </p>
+  </div>
+
+ 
+<% end %>
