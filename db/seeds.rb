@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.create!(email:"glenngartner@gmail.com", password:"password")
+    i = 1
+5.times do 
+    user.items.create!(name: "Item #{i}")
+    i += 1
+end
