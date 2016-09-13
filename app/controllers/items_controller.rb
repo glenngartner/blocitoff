@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   def create
     @user = current_user
     @item = @user.items.new(item_params)
+    @age = @item.created_at.to_i
     @new_item = Item.new
 
     if @item.save

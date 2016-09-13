@@ -2,6 +2,7 @@
   <div id='item-<%= item.id %>'>
   <p id: "item-#{item.id}" class='task-item'>
     <%= item.name %> 
+    is <%= time_ago_in_words(item.created_at)%> old
     <%= link_to "", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
   </p>
   </div>
